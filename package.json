@@ -11,6 +11,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "nuxt": "^1.0.0",
     "vuetify": "^1.0.0"
   },
