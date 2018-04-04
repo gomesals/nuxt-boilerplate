@@ -45,8 +45,8 @@ export default {
     mini: true,
     items: [
       { title: 'Início', icon: 'dashboard', to: 'index' },
-      { title: 'Snackbar', icon: 'build', to: 'snackbar' },
-      { title: 'Page 1', icon: 'build', to: '' },
+      { title: 'Snackbar', icon: 'build', to: 'samples-snackbar' },
+      { title: 'Formulário', icon: 'build', to: 'samples-form' },
       { title: 'Page 2', icon: 'build', to: '' }
     ],
     toolbar: {
