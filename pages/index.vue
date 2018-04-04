@@ -1,26 +1,3 @@
 <template lang="pug">
-  div
-    v-btn(@click="ss") snack success
-    v-btn(@click="se") snack error
-    v-btn(@click="sw") snack warning
-    v-btn(@click="sd") snack default
+  .display-1 Hello
 </template>
-
-<script>
-export default {
-  methods: {
-    ss() {
-      this.$root.$emit('snackSuccess', 'Success snack')
-    },
-    se() {
-      this.$root.$emit('snackError', 'Error snack')
-    },
-    sw() {
-      this.$root.$emit('snackWarning', 'Warning snack')
-    },
-    sd() {
-      this.$root.$emit('snackDefault', 'Default snack')
-    }
-  }
-}
-</script>

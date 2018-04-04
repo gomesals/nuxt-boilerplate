@@ -14,28 +14,28 @@
             v-list-tile-avatar
               v-icon code
             v-list-tile-content
-              v-list-tile-title App's name
+              v-list-tile-title App
       v-list.mt-4.pt-0(dense)
         v-list-tile(
           v-if="possibleToShow(item)"
           v-for="item in items"
           :key="item.title"
-          :to="{name: `admin${item.to}`}"
+          :to="{name: item.to}"
           nuxt
         )
           v-list-tile-action(:title="item.title")
-            v-icon {{item.icon}}
+            v-icon {{ item.icon }}
           v-list-tile-content
-            v-list-tile-title {{item.title}}
+            v-list-tile-title {{ item.title }}
         v-divider.transparent.my-3
-        v-list-tile(:to="{name: 'logout'}" nuxt title="Logout")
+        v-list-tile(:to="{name: 'sair'}" nuxt title="Sair")
           v-list-tile-action
             v-icon exit_to_app
           v-list-tile-content
-            v-list-tile-title Logout
+            v-list-tile-title Sair
     v-toolbar(dark app flat color="primary")
       v-toolbar-side-icon(@click.stop="navigationToggle")
-      v-toolbar-title {{toolbar.title}}
+      v-toolbar-title {{ toolbar.title }}
 </template>
 
 <script>
@@ -44,13 +44,13 @@ export default {
     drawer: null,
     mini: true,
     items: [
-      { title: 'Page', icon: 'build', to: '' },
-      { title: 'Page', icon: 'build', to: '' },
-      { title: 'Page', icon: 'build', to: '' },
-      { title: 'Page', icon: 'build', to: '' }
+      { title: 'Início', icon: 'dashboard', to: 'index' },
+      { title: 'Snackbar', icon: 'build', to: 'snackbar' },
+      { title: 'Page 1', icon: 'build', to: '' },
+      { title: 'Page 2', icon: 'build', to: '' }
     ],
     toolbar: {
-      title: 'Page'
+      title: 'Início'
     }
   }),
   beforeMount() {
