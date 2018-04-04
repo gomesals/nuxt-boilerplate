@@ -1,5 +1,6 @@
 <template lang="pug">
   v-app
+    navigation
     v-content
       v-container(grid-list-xl)
         v-layout(row wrap)
@@ -9,8 +10,10 @@
 </template>
 
 <script>
+import Navigation from '~/components/Navigation'
 import Snackbar from '~/components/Snackbar'
+
 export default {
-  components: { Snackbar }
+  components: { Navigation, Snackbar }
 }
 </script>
